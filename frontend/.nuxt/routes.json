@@ -1,0 +1,26 @@
+[
+  {
+    "name": "callback",
+    "path": "/callback",
+    "component": "/nuxt-auth0/frontend/pages/callback.vue",
+    "chunkName": "pages/callback"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/nuxt-auth0/frontend/pages/login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "logout",
+    "path": "/logout",
+    "component": "/nuxt-auth0/frontend/pages/logout.vue",
+    "chunkName": "pages/logout"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/nuxt-auth0/frontend/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
