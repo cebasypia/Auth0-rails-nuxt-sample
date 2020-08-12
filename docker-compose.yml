@@ -1,0 +1,22 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+    # command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails assets:precompile && bundle exec rails s -e production"
+    volumes:
+      - .:/nuxt-auth0
+      - bundle:/usr/local/bundle
+      - public-data:/nuxt-auth0/public
+      - tmp-data:/nuxt-auth0/tmp
+      - yarn-cache:/usr/local/share/.cache/yarn/v6
+    ports:
+      - "3000:3000"
+      - "3333:3333"
+    stdin_open: true
+    tty: true
+volumes:
+  bundle:
+  yarn-cache:
+  public-data:
+  tmp-data:
