@@ -1,5 +1,15 @@
 version: "3"
 services:
+  web:
+    build:
+      context: nginx
+    volumes:
+      - public-data:/nuxt-auth0/public
+      - tmp-data:/nuxt-auth0/tmp
+    ports:
+      - 80:80
+    depends_on:
+      - app
   app:
     build:
       context: .

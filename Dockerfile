@@ -10,3 +10,8 @@ COPY Gemfile /nuxt-auth0/Gemfile
 COPY Gemfile.lock /nuxt-auth0/Gemfile.lock
 RUN bundle install
 COPY . /nuxt-auth0
+
+EXPOSE 3000
+
+# puma.sockを配置するディレクトリを作成
+RUN mkdir -p tmp/sockets
